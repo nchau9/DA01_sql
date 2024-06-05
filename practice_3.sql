@@ -43,3 +43,10 @@ from employees
 WHERE EXTRACT (MONTH FROM joining_date) between 1 and 7
 AND EXTRACT (YEAR FROM joining_date)=2022
 --ex9 https://platform.stratascratch.com/coding/9829-positions-of-letter-a?code_type=1
+SELECT position('a' in first_name) AS position
+FROM worker
+WHERE first_name='Amitah'
+--ex10 https://platform.stratascratch.com/coding/10039-macedonian-vintages?code_type=1
+SELECT SUBSTRING(title, length(winery)+2,4)
+FROM winemag_p2
+WHERE country='Macedonian'
